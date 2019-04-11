@@ -16,16 +16,18 @@
     </style>
   </head>
   <body>
+      <!-- https://www.w3.org/WAI/tutorials/menus/flyout/  -->
     <div class="wrapper">
       <h1>Collapsible exercise</h1>
       <div class="collapsible-container">
-        <button class="collapsible-trigger">show content</button>
-        <div class="collapsible-child hidden">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda,
-          harum veritatis necessitatibus ullam quis optio? Illo dolorum
-          doloribus, voluptate autem labore voluptatum vero commodi quae
-          consequuntur incidunt aliquam laboriosam perspiciatis.
-        </div>
+        <button class="collapsible-trigger">show menu</button>
+        <ul class="collapsible-child hidden">
+          <li><a href="http://www.apple.com">apple</a></li>
+          <li><a href="http://www.pear.com"></a>pear</a></li>
+          <li><a href="http://www.plum.com"></a>plum</a></li>
+          <li><a href="http://www.peach.com"></a>peach</a></li>
+          <li><a href="http://www.orange.com"></a>orange</a></li>
+        </ul>
       </div>
     </div>
   </body>
@@ -43,10 +45,10 @@
         event.preventDefault();
 
         if (child.classList.contains("hidden")) {
-          trigger.innerHTML = "hide content";
+          trigger.innerHTML = "hide menu";
           child.classList.remove("hidden");
         } else {
-          trigger.innerHTML = "show content";
+          trigger.innerHTML = "show menu";
           child.classList.add("hidden");
         }
       });
